@@ -1,1 +1,1 @@
-# graspqp.github.io
+# icgraspnet.github.io

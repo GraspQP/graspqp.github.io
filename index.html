@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="GraspQP: Differentiable Optimization of Force Closure for Diverse and Robust Dexterous Grasping">
+  <meta name="keywords" content="dexterous grasping, force closure, quadratic program, differentiable optimization, datasets, robotics, GraspQP, MALA*">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GraspQP: Differentiable Optimization of Force Closure for Diverse and Robust Dexterous Grasping</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">GraspQP: Differentiable Optimization of Force Closure for Diverse and Robust Dexterous Grasping</h1>
+            <h3 class="title is-4">CoRL 2025</h3>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="https://renezurbruegg.github.io/">René Zurbrügg</a>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=QZKCzOQAAAAJ&hl=de&oi=ao">
+                Andrei Cramariuc</a>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=DO3quJYAAAAJ&hl=de&oi=ao">Marco Hutter</a></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">ETH Zürich</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link -->
+                <span class="link-block">
+                  <a href="./static/paper.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper (PDF)</span>
+                  </a>
+                </span>
+                <!-- arXiv Link (optional) -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link (placeholder) -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code (coming)</span>
+                  </a>
+                </span>
+                <!-- Dataset Link (placeholder) -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>Dataset (coming)</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- Replace the teaser image or drop in a short looping video here -->
+        <img src="./static/images/graspqp-title.jpg" alt="Visualization of predicted grasp poses for dexterous hands" />
+        <h2 class="subtitle has-text-centered" style="margin-top: 12px;">
+          Visualization of predicted grasp poses for dexterous hands across multiple grippers and grasp types.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Dexterous robotic hands enable versatile interactions through the flexibility and adaptability of a multi-finger setup, allowing for a wide range of task-specific grasp configurations in diverse environments. However, access to diverse and high-quality grasp data is essential to fully exploit the capabilities of dexterous hands, be it to train grasp prediction models from point clouds, train manipulation policies, or to support high-level task planning with a broader range of action options. Existing approaches for dataset generation rely on sampling-based algorithms or simplified force-closure analysis, which tend to converge to power grasps and often exhibit limited diversity.
+            </p>
+            <p>
+              We propose a method to synthesize large-scale, diverse, and physically feasible grasps that go beyond simple power grasps to more refined manipulation, such as pinches or tri-finger precision grasps. We introduce a rigorous differentiable energy formulation of force closure, implicitly defined through a Quadratic Program (QP). In addition, we present an adjusted optimization method (MALA*) that improves performance by dynamically rejecting gradient steps based on the global sample distribution. We extensively evaluate our approach and demonstrate significant improvements in both grasp diversity and the stability of final grasp predictions. Finally, we provide a large-scale grasp dataset for the 5,700 objects from DexGraspNet, consisting of five different grippers and three different grasp types.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h2 class="title is-3">Method Overview</h2>
+            <div class="method">
+              <img src="./static/images/overview.png" alt="GraspQP overview" style="width:100%" />
+              <div class="content has-text-justified" style="margin-top: 10px;">
+                <p>
+                  Starting from coarse initializations, grasp candidates are optimized by minimizing a composite energy function composed of distance, regularization, and our force-closure term. The force-closure energy is computed via a differentiable QP that ensures the contact wrenches positively span <em>R</em><sup>6</sup>. Gradients of the energy refine grasp poses using our distribution-aware MALA* optimizer that adds dynamic resetting of poor proposals and adaptive temperature scaling based on the batch energy statistics.
+                </p>
+                <p>
+                  To ensure the wrench matrix forms a linear basis, we scale the energy by the product of singular values of the wrench matrix, encouraging full rank and maximizing the volumetric extent of the wrench space.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h2 class="title">Results</h2>
+          <p class="content has-text-justified">We report improvements in Successful Unique Grasp Rate (UGR) and entropy (H) across grippers and contact counts, evaluated with 5N disturbance forces in Isaac Lab. See paper for full tables and ablations.</p>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+          <img src="./static/images/table_1.png" alt="UGR/H summary" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <!-- <pre><code>@inproceedings{zurbruegg2025graspqp,
+  title={GraspQP: Differentiable Optimization of Force Closure for Diverse and Robust Dexterous Grasping},
+  author={Zurbr{"u}gg, Ren{\'e} and Cramariuc, Andrei and Hutter, Marco},
+  booktitle={Conference on Robot Learning (CoRL)},
+  year={2025},
+  note={Under review}
+}</code></pre> -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and Bulma-based project pages.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
